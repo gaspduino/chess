@@ -1,0 +1,20 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.04.23"]
+[Round "?"]
+[White "Vikas130"]
+[Black "Corentin_mrchd"]
+[Result "0-1"]
+[TimeControl "300"]
+[WhiteElo "920"]
+[BlackElo "926"]
+[Termination "Corentin_mrchd a gagné par échec et mat"]
+[ECO "C44"]
+[EndTime "14:45:38 GMT+0000"]
+[Link "https://www.chess.com/game/live/137701660174?username=corentin_mrchd"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3 dxc3 5. bxc3 Qe7 6. Bc4 Qxe4+ 7. Qe2 Qxe2+
+8. Kxe2 Nf6 9. Ng5 d5 10. Bb3 h6 11. Bf4 hxg5 12. Bxg5 Be7 13. Nd2 O-O 14. Nf3
+Re8 15. Nh4 Ng4 16. Ng6 Bxg5+ 17. Ne5 Rxe5+ 18. Kf3 Bf5 19. h3 Nf6 20. Bxd5 Nxd5
+21. Rad1 Be4+ 22. Kg4 Bxg2 23. Rhg1 Nf6+ 24. Kg3 Bd5 25. Rge1 Rxe1 26. Rxe1 Ne4+
+27. Kg4 Bd2 28. Rb1 Nxf2+ 29. Kf5 Be4# 0-1
