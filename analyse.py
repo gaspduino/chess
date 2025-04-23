@@ -1,3 +1,4 @@
+import os
 import requests
 import chess.pgn
 import chess.engine
@@ -20,7 +21,7 @@ def get_latest_game_pgn(username, year, month):
         games = response.json().get("games", [])
         if games:
             last_game = games[-1]  # dernière partie
-            return last_game.get("pgn")
+            return last_game
         else:
             print("Aucune partie trouvée pour ce mois.")
             return None
@@ -50,38 +51,57 @@ def evaluate_move(score):
     else:
         return "Blunder"
 
+def save_analysis_to_txt(analysis_text, file_path):
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)  # Crée le dossier s'il n'existe pas
+    with open(file_path, "w") as file:
+        file.write(analysis_text)
+    print(f"Analyse enregistrée dans {file_path}")
+
 # Tes infos
 username = "corentin_mrchd"
 year = 2025
 month = 4
 
-pgn_data = get_latest_game_pgn(username, year, month)
+game_data = get_latest_game_pgn(username, year, month)
 
-if pgn_data:
+if game_data:
+    pgn_data = game_data.get("pgn")
+    white_player = game_data.get("white", {}).get("username", "Unknown White")
+    black_player = game_data.get("black", {}).get("username", "Unknown Black")
+
     game = chess.pgn.read_game(io.StringIO(pgn_data))
 
+    analysis_text = ""
+    
     with chess.engine.SimpleEngine.popen_uci("/usr/games/stockfish") as engine:
         board = game.board()
 
         for move in game.mainline_moves():
             move_san = board.san(move)
-            print(f"Coup joué : {move_san}")
+            analysis_text += f"Coup joué : {move_san}\n"
             board.push(move)
 
             info = engine.analyse(board, chess.engine.Limit(time=1.0))
             score_obj = info["score"].relative
 
             if score_obj.is_mate():
-                print(f"Évaluation : Mat en {score_obj.mate()}")
-                print("Évaluation du coup : Forced Mate")
+                analysis_text += f"Évaluation : Mat en {score_obj.mate()}\n"
+                analysis_text += "Évaluation du coup : Forced Mate\n"
             else:
                 evaluation = score_obj.score(mate_score=10000)
-                print(f"Évaluation : {evaluation}")
-                print(f"Évaluation du coup : {evaluate_move(evaluation)}")
+                analysis_text += f"Évaluation : {evaluation}\n"
+                analysis_text += f"Évaluation du coup : {evaluate_move(evaluation)}\n"
 
             if "pv" in info:
                 best_move = info["pv"][0]
-                print(f"Meilleur coup : {board.san(best_move)}")
+                analysis_text += f"Meilleur coup : {board.san(best_move)}\n"
             else:
-                print("Aucun meilleur coup trouvé.")
-            print()
+                analysis_text += "Aucun meilleur coup trouvé.\n"
+            analysis_text += "\n"
+
+    # Générer le chemin du fichier en utilisant les noms des joueurs
+    file_name = f"{white_player}_vs_{black_player}_game_analysis.txt"
+    file_path = f"/home/gaspard/Documents/code/python/chess/chess/analyses/{file_name}"
+
+    # Enregistrer l'analyse dans un fichier texte
+    save_analysis_to_txt(analysis_text, file_path)
