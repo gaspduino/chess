@@ -1,22 +1,37 @@
 import tkinter as tk
 import chess
 import chess.svg
+import chess.pgn
 from cairosvg import svg2png
 from PIL import Image, ImageTk
 import io
+import os
 
-# === Lecture de la partie (PGN ou manuellement) ===
-moves = [
-    "e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+"
-]
+# === Trouver le dernier fichier PGN ===
+analyses_folder = "analyses"
+pgn_files = [f for f in os.listdir(analyses_folder) if f.endswith(".pgn")]
+pgn_files.sort(key=lambda x: os.path.getmtime(os.path.join(analyses_folder, x)), reverse=True)
 
-board = chess.Board()
+if not pgn_files:
+    raise FileNotFoundError("Aucun fichier PGN trouvé dans le dossier 'analyses/'.")
+
+latest_file = os.path.join(analyses_folder, pgn_files[0])
+
+# === Lecture du PGN avec chess.pgn ===
+with open(latest_file, "r") as f:
+    game = chess.pgn.read_game(f)
+
+if not game:
+    raise ValueError("Le fichier PGN ne contient pas de partie valide.")
+
+# === Création des positions ===
+board = game.board()
 boards = [board.copy()]
-for move in moves:
-    board.push_san(move)
+for move in game.mainline_moves():
+    board.push(move)
     boards.append(board.copy())
 
-# === Interface ===
+# === Interface graphique ===
 class ChessViewer(tk.Tk):
     def __init__(self, positions):
         super().__init__()
