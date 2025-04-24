@@ -1,0 +1,62 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.04.23"]
+[Round "-"]
+[White "kingoooo1123"]
+[Black "Corentin_mrchd"]
+[Result "1-0"]
+[CurrentPosition "4kR2/p5R1/5n1p/2B5/2P5/7P/P1P2PP1/5K2 b - - 6 40"]
+[Timezone "UTC"]
+[ECO "C50"]
+[ECOUrl "https://www.chess.com/openings/Italian-Game"]
+[UTCDate "2025.04.23"]
+[UTCTime "19:28:49"]
+[WhiteElo "918"]
+[BlackElo "919"]
+[TimeControl "300"]
+[Termination "kingoooo1123 won by checkmate"]
+[StartTime "19:28:49"]
+[EndDate "2025.04.23"]
+[EndTime "19:34:48"]
+[Link "https://www.chess.com/game/live/137711514442"]
+
+1. e4 { [good !] Meilleur: d2d4 } 1... e5 { [good !] Meilleur: c7c5 } 2. Bc4
+{ [excellent !!] Meilleur: g1f3 } 2... Nc6 { [excellent !!] Meilleur: g8f6 } 3.
+Nf3 { [excellent !!] } 3... Nf6 { [excellent !!] Meilleur: f8c5 } 4. d3
+{ [excellent !!] } 4... Bc5 { [excellent !!] } 5. h3
+{ [excellent !!] Meilleur: b1c3 } 5... d6 { [excellent !!] } 6. Ng5
+{ [excellent !!] Meilleur: c2c3 } 6... h6 { [mistake ?!] Meilleur: e8g8 } 7.
+Nxf7 { [mistake ?!] } 7... Qe7 { [mistake ?!] Meilleur: c5f2 } 8. Nxh8
+{ [mistake ?!] } 8... Be6 { [blunder ??] Meilleur: g7g5 } 9. Bxe6
+{ [mistake ?!] Meilleur: h8g6 } 9... Qxe6 { [mistake ?!] } 10. Ng6
+{ [mistake ?!] Meilleur: c1e3 } 10... Bd4 { [mistake ?!] Meilleur: e6f7 } 11.
+Nc3 { [mistake ?!] Meilleur: e1g1 } 11... d5 { [mistake ?!] Meilleur: e6f7 }
+12. exd5 { [blunder ??] } 12... Qf5 { [blunder ??] Meilleur: d4c3 } 13. Qf3
+{ [blunder ??] Meilleur: e1g1 } 13... Bxc3+ { [blunder ??] Meilleur: f5f3 } 14.
+bxc3 { [blunder ??] } 14... Qd7 { [blunder ??] Meilleur: f5f3 } 15. dxc6
+{ [blunder ??] } 15... Qxc6 { [blunder ??] Meilleur: b7c6 } 16. Qxc6+
+{ [blunder ??] } 16... bxc6 { [blunder ??] } 17. Nxe5 { [blunder ??] } 17...
+Nd5 { [blunder ??] Meilleur: e8c8 } 18. Bb2 { [blunder ??] Meilleur: e1d2 }
+18... c5 { [blunder ??] Meilleur: d5f4 } 19. O-O
+{ [blunder ??] Meilleur: e1d2 } 19... Nf4 { [blunder ??] Meilleur: e8c8 } 20.
+Rfe1 { [blunder ??] } 20... Kf8 { [blunder ??] Meilleur: e8c8 } 21. Nd7+
+{ [blunder ??] Meilleur: e1e4 } 21... Kg8 { [blunder ??] Meilleur: f8f7 } 22.
+c4 { [blunder ??] } 22... Rd8 { [blunder ??] Meilleur: f4g6 } 23. Re7
+{ [blunder ??] } 23... Ne2+ { [blunder ??] } 24. Kf1
+{ [blunder ??] Meilleur: g1h2 } 24... Nf4 { [blunder ??] Meilleur: e2d4 } 25.
+Rxg7+ { [blunder ??] } 25... Kh8 { [blunder ??] } 26. Rf7+
+{ [blunder ??] Meilleur: a1e1 } 26... Kg8 { [blunder ??] } 27. Rg7+
+{ [blunder ??] } 27... Kh8 { [blunder ??] } 28. Re1 { [blunder ??] } 28... Nh5
+{ [blunder ??] } 29. Rge7+ { [blunder ??] Meilleur: g7g3 } 29... Kg8
+{ [blunder ??] } 30. Nxc5 { [blunder ??] Meilleur: g2g4 } 30... Nf6
+{ [blunder ??] Meilleur: d8f8 } 31. R1e6 { [blunder ??] Meilleur: b2f6 } 31...
+Nh7 { [blunder ??] Meilleur: d8f8 } 32. Rg6+ { [blunder ??] } 32... Kf8
+{ [blunder ??] } 33. Rgg7 { [blunder ??] Meilleur: e7h7 } 33... Rxd3
+{ [blunder ??] Meilleur: h7g5 } 34. Nd7+ { [blunder ??] Meilleur: c5e6 } 34...
+Rxd7 { [blunder ??] } 35. Rxd7 { [blunder ??] } 35... Nf6
+{ [blunder ??] Meilleur: f8e8 } 36. Ba3+ { [blunder ??] Meilleur: b2f6 } 36...
+c5 { [blunder ??] } 37. Bxc5+ { [blunder ??] } 37... Ke8 { [blunder ??] } 38.
+Rde7+ { [blunder ??] Meilleur: g7e7 } 38... Kf8 { [blunder ??] Meilleur: e8d8 }
+39. Ref7+ { [blunder ??] Meilleur: e7a7 } 39... Ke8 { [blunder ??] } 40. Rf8#
+{ [blunder ??] } 1-0
+
